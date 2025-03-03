@@ -24,8 +24,13 @@ void enterC(int &c) {
   cin >> c;
 }
 
-void remainder() {
-  // разрабатывается Ивановым И. - ветка branch_remainder
+int remainder() {
+  int a, b, c;
+  enterA(a);
+  enterB(b);
+  enterC(c);
+  cout << "Остаток от деления суммы целых чисел А и В на число С: ";
+  return (a + b) % c;
 }
 
 void integerPart() {
