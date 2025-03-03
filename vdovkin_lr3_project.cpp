@@ -12,34 +12,37 @@ void clearTerminal() {
 void enterA(int &a) {
   cout << "Введите целое число А: ";
   cin >> a;
+  cout << "Введенное число А: " << a << endl;
 }
 
 void enterB(int &b) {
   cout << "Введите целое число В: ";
   cin >> b;
+  cout << "Введенное число В: " << b << endl;
 }
 
 void enterC(int &c) {
   cout << "Введите целое число С: ";
   cin >> c;
+  cout << "Введенное число С: " << c << endl;
 }
 
-int remainder() {
+void remainder() {
   int a, b, c;
   enterA(a);
   enterB(b);
   enterC(c);
-  cout << "Остаток от деления суммы целых чисел А и В на число С: ";
-  return (a + b) % c;
+  cout << "Остаток от деления суммы целых чисел А и В на число С: "
+       << (a + b) % c;
 }
 
-int integerPart() {
+void integerPart() {
   int a, b, c;
   enterA(a);
   enterB(b);
   enterC(c);
-  cout << "Целая часть от деления суммы целых чисел А и В на число С: ";
-  return (a + b) / c;
+  cout << "Целая часть от деления суммы целых чисел А и В на число С: "
+       << (a + b) / c;
 }
 
 int main(int argc, char const *argv[]) {
@@ -52,7 +55,7 @@ int main(int argc, char const *argv[]) {
 
   clearTerminal();
 
-  int a;
+  int choice;
   do {
     cout << "\nВыберите задачу:" << endl;
     cout << "1. Ввод целого числа А" << endl;
@@ -67,20 +70,23 @@ int main(int argc, char const *argv[]) {
     cout << "0. Выход" << endl;
     cout << "Введите номер задачи: ";
 
-    cin >> a;
+    cin >> choice;
 
-    switch (a) {
+    switch (choice) {
     case 1:
       clearTerminal();
-      enterA();
+      int a;
+      enterA(a);
       break;
     case 2:
       clearTerminal();
-      enterB();
+      int b;
+      enterB(b);
       break;
     case 3:
       clearTerminal();
-      enterC();
+      int c;
+      enterC(c);
       break;
     case 4:
       clearTerminal();
@@ -98,7 +104,7 @@ int main(int argc, char const *argv[]) {
       cout << "Неверный выбор. Пожалуйста, попробуйте снова." << endl;
       break;
     }
-  } while (a != 0);
+  } while (choice != 0);
 
   return 0;
 }
