@@ -33,8 +33,13 @@ int remainder() {
   return (a + b) % c;
 }
 
-void integerPart() {
-  // разрабатывается Петровым П. - ветка branch_integerPart
+int integerPart() {
+  int a, b, c;
+  enterA(a);
+  enterB(b);
+  enterC(c);
+  cout << "Целая часть от деления суммы целых чисел А и В на число С: ";
+  return (a + b) / c;
 }
 
 int main(int argc, char const *argv[]) {
