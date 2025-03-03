@@ -9,15 +9,14 @@ void clearTerminal() {
 #endif
 }
 
-void enterA() {
-  int a;
+void enterA(int &a) {
   cout << "Введите целое число А: ";
   cin >> a;
-  cout << "Результат: " << a << endl;
 }
 
-void enterB() {
-  // разрабатывается Петровым П. - ветка branch_enterB
+void enterB(int &b) {
+  cout << "Введите целое число В: ";
+  cin >> b;
 }
 
 void enterC() {
