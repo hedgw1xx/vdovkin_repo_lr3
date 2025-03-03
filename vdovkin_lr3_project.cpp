@@ -10,7 +10,10 @@ void clearTerminal() {
 }
 
 void enterA() {
-  // разрабатывается Ивановым И. - ветка branch_enterA
+  int a;
+  cout << "Введите целое число А: ";
+  cin >> a;
+  cout << "Результат: " << a << endl;
 }
 
 void enterB() {
