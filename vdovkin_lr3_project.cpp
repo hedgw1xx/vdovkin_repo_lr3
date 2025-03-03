@@ -19,8 +19,9 @@ void enterB(int &b) {
   cin >> b;
 }
 
-void enterC() {
-  // разрабатывается Сидоровым С. - ветка branch_enterC
+void enterC(int &c) {
+  cout << "Введите целое число С: ";
+  cin >> c;
 }
 
 void remainder() {
